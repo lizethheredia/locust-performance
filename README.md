@@ -35,3 +35,6 @@ Start with 10 users, ramp up 2/second. Increase to 100 to see degradation.
 ## Stack
 - Python 3.11
 - Locust 2.43.4
+
+## Interface
+<img width="600" alt="Locust Results" src="https://github.com/user-attachments/assets/d0a8b267-1bdd-49f5-affa-2fb770725971" />
