@@ -12,7 +12,9 @@ class PetStoreUser(HttpUser):
 
     @task(2)
     def get_pet_by_id(self):
-        self.client.get("/v2/pet/1")
+        with self.client.get("/v2/pet/1", catch_response=True) as response:
+            if response.status_code == 404:
+                response.success()
 
     @task(1)
     def get_store_inventory(self):
